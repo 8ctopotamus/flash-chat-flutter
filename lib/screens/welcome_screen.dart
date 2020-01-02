@@ -12,6 +12,7 @@ class WelcomeScreen extends StatefulWidget {
 class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProviderStateMixin {
 
   AnimationController controller;
+  Animation animation;
 
   @override
   void initState() {
@@ -19,13 +20,25 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
     controller = AnimationController(
       duration: Duration(seconds: 1),
       vsync: this,
-      upperBound: 100.0,
+    );
+    animation = CurvedAnimation(
+      parent: controller,
+      curve: Curves.decelerate,
     );
     controller.forward();
+    animation.addStatusListener((status) {
+      print(status);
+    });
     controller.addListener(() {
       setState(() {});
-      print(controller.value);
+      print(animation.value);
     });
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
   }
 
   @override
@@ -44,7 +57,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
                   tag: 'logo',
                   child: Container(
                     child: Image.asset('images/logo.png'),
-                    height: controller.value,
+                    height: animation.value * 100,
                   ),
                 ),
                 Text(
