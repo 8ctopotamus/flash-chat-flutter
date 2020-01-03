@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "347512387471",
+    "firebase_url": "https://flash-chat-36b93.firebaseio.com",
+    "project_id": "flash-chat-36b93",
+    "storage_bucket": "flash-chat-36b93.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347512387471:android:d0ce0b2b3f7e8004c97dfa",
+        "android_client_info": {
+          "package_name": "es.zylocod.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347512387471-u9ci9ov11vbupvn8i4ac10otc4n3af7q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCof5cARFUa4T5J7x6ORcVSI-EZBJj6LtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347512387471-u9ci9ov11vbupvn8i4ac10otc4n3af7q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
